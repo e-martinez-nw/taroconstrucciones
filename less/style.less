@@ -1,0 +1,412 @@
+/******************************************************************
+Theme Name: FTScratch-Nw (NOMBRE DEL CLIENTE)
+Theme URI: http://www.nuevaweb.com.mx
+Description: Tema diseñado y desarrollado exclusivamente para "(NOMBRE DEL CLIENTE)" por NuevaWeb 2014.
+Author: <a href="http://www.nuevaweb.com.mx">the NuevaWeb team</a>
+Author URI: http://www.nuevaweb.com.mx
+Version: 1.0
+Tags: flexible-width, translation-ready, microformats, rtl-language-support, custom-template, nuevaweb
+
+License: -
+License URI: -
+
+Happy Developing!
+
+******************************************************************/
+
+//	Import all your stuff here
+// ------------------------------------
+
+@import "wordpress.less";
+@import "../lib/font-awesome-4.3.0/less/font-awesome.less"; // Font-Awesome Docs: http://fontawesome.io/icons/ 
+
+// Bootstrap resources. 
+// Default: There are only activated the main .less archives to make it work.
+@import "bootstrap.less"; // Bootstrap Docs: http://getbootstrap.com/
+
+// Bootstrap Disabling responsiveness Docs: http://getbootstrap.com/getting-started/#disable-responsive
+// .container{ width: 970px !important; } .container-fluid{ min-width: 970px !important; }
+
+//	Fix any path's of your libs Here
+// ------------------------------------
+
+// @fa-font-path:        "../lib/font-awesome-4.3.0/fonts/"; // Font-Awesome Icon Path Fix
+@icon-font-path:          "../lib/bootstrap-3.3.1/fonts/"; // Bootstrap Icon Path Fix
+
+//	My Fonts Here
+// ------------------------------------
+// Learn how to use @font-face - Docs: http://nicewebtype.com/notes/2009/10/30/how-to-use-css-font-face/
+
+// @font-face{
+	// font-family: ; // 'family name' 
+	// font-style: ; // normal, italic, oblique 
+	// font-weight: ; // 100 (This is light), 400 (This is normal), 900 (This is bold). 
+	// src: url("fonts/");
+// }
+
+// @primaryFontFamily: @CustomFontFamilyFontFamily;
+// @secondaryFontFamily: @SecondCustomFontFamily;
+//
+// @CustomFontFamilyFontFamily: "Your-Sanserif Font Family", Arial, sans-serif;
+// @SecondCustomFontFamily: Georgia, "Your-Serif FontFamily", Times, serif;
+
+
+@import "Open_Sans.less";
+@primaryFontFamily: @OpenSans;
+
+@OpenSans: "OpenSans", Arial, sans-serif;
+
+
+//	Variables
+// ------------------------------------
+
+@black:						#000;
+@white:						#fff;
+
+
+// ====================================
+//	General Selectors
+// ====================================
+
+body{ 
+	font-size: 14px; 
+	color: @black; 
+	font-family: 'Raleway', sans-serif; }
+
+h1, h2, h3, h4, h5, h6{ font-family: @primaryFontFamily; }
+
+img{ 
+	vertical-align: top;
+	width: 100%;
+	height: auto;
+} // Remove 2 pixels under the image
+
+ol, ul, dl{}
+
+li{}
+
+p{}
+
+a{}
+
+blockquote{}
+
+// General Clases
+// ====================================
+
+.none{ display: none; }
+.relative{ position: relative; }
+.absolute{ position: absolute; }
+.fixed{ position: fixed; }
+
+.t-left{ text-align: left; }
+.t-right{ text-align: right; }
+.t-center{ text-align: center; }
+
+.transition {
+	transition: .1s;
+}
+
+
+// Wordpress Gallery
+// ====================================
+
+.gallery-item{
+	padding: 0 10px;
+
+	img{
+		width: 100%;
+		height: auto;
+	}
+}
+
+
+.wp-caption{
+
+	a{ display: block; }
+
+	img{ }
+}
+
+.wp-caption p.wp-caption-text, .wp-caption-text{
+	font-weight: 400;
+	font-size: 1.2em;
+	line-height: 1em;
+	padding: 15px 0 10px;
+}
+
+.gallery-columns-3{
+	.gallery-item{ width: 33.3% !important; }
+}
+
+
+// Header // Your Main Header Css goes here.
+// ====================================
+
+// #main-header{ }
+
+@import "dropdown_menu.less"; // Use this Dropdown Menu to save time
+
+
+// Bootstrap collapse classese
+// .navbar-toggle{
+// 	.icon-bar{ background-color: @black; }
+// }
+// .navbar-brand{ height: auto; }
+
+// Main-nav
+// ====================================
+.main-nav {
+	position: fixed;
+	z-index: 99;
+	left: 0;
+
+	a {
+		position: relative;
+		display: inline-block;
+
+		.widget-custom-menu-image img{
+			width: 60px;
+			height: 75px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			.transition;
+		}
+		
+		.widget-custom-menu-title {
+			.none;
+			.transition;
+			position: absolute;
+		}
+
+		&:hover {
+			.widget-custom-menu-image img {
+				background-position: -60px 0;
+			}
+
+			.widget-custom-menu-title {
+				display: table;
+				height: 75px;
+				left: 80px;
+				top: 0;
+				.transition;
+
+				p {
+					display: table-cell;
+					vertical-align: middle;
+				}
+			}
+		}
+	}
+}
+div#sidebar {
+    width: 100px;
+    float: left;
+    padding: 0;
+}
+
+div#navegador {
+    width: 100px;
+    height: 600px;
+    background-color: #ccc;
+    border-radius: 15px;
+    display: block;
+}
+
+div#logonav {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    cursor: pointer;
+}
+
+.active { background-position: -60px 0; }
+// Carousel
+// ====================================
+
+.carousel-slide{
+	height: 460px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.carousel-control{ cursor: pointer; }
+
+
+// Clientes
+// ====================================
+#slidedesarrollos {
+	img {width: auto;}
+
+	#poliven {
+	    position: relative;   
+	    top: 45px;   
+	    left: -330px;
+	}
+
+		#polipre {
+	    position: relative;   
+	    top: -150px;   
+	    left: 0px;
+	}
+
+		#polides {
+	    position: relative;   
+	    top: 240px;   
+	    left: -440px;
+	}
+}
+
+
+// Clientes
+// ====================================
+#clientes {
+	text-align: center;
+
+	.widget-custom-link {
+		display: inline-block;
+		border: 1px solid #EDEDED;
+		width: 190px;
+		height: 140px;
+		margin: 10px;
+
+		.widget-custom-link-image {
+
+    		img {
+				width: auto;
+				height: auto;
+				max-height: 140px;
+				max-width: 190px;
+			}//img
+		}//.widget-custom-link-image
+	}//.widget-custom-link
+}//#clientes
+
+
+
+
+// Contacto
+// ====================================
+#contacto {
+	.textwidget {
+		text-align: center;
+		padding: 20px 0;
+
+		.lmm-panel {
+			display: none;
+		}
+	}
+
+	.contact-form {
+		.textwidget {
+			p {
+				text-align: left;
+
+				&:last-child {
+					text-align: center;
+				}
+			}
+
+			input, textarea {
+				width: 100%;
+				border: 1px solid #CCC;
+				background: #ccc;
+				margin: 0 0 30px;
+				padding: 15px;
+				border-radius: 5px;
+				color: gray;
+				font-size: 14px;
+			}//input, textarea
+
+			input[type=submit] {
+				cursor: pointer;
+				border: solid;
+				border-width: 1px;
+				border-color: dimgray;
+				margin: 0 0 5px;
+				padding: 10px;
+				border-radius: 5px;
+				width: 100px;
+			}//input[type=submit]
+		}//.textwidget
+
+		.ajax-loader {width: auto;}
+	}//.contact-form
+}//#contacto
+
+#twitter {text-align: center;}
+
+
+// Footer // Your Main Footer Css goes here.
+// ====================================
+
+#main-footer{ 
+	text-align: center; 
+
+	img {width: auto;}
+}
+
+
+
+//	Components
+// ====================================
+
+#searchform{
+
+	// Input Placeholder color
+	::-webkit-input-placeholder{ color: darken(@white, 30%);}
+	:-moz-placeholder{ color: darken(@white, 30%);}
+	::-moz-placeholder{ color: darken(@white, 30%);}
+	:-ms-input-placeholder { color: darken(@white, 30%);}
+}
+
+
+// Media Queries
+// ====================================
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: @screen-lg-min) { }// Large devices
+
+/* Midum devices only (desktops, from 992px to 1200px) */
+@media (min-width: @screen-md-min) and (max-width: @screen-md-max) { }// Midum devices only
+
+/* Medium devices and up (desktops, 992px and up) */
+@media (min-width: @screen-md-min) { }// Midum devices and up
+
+/* Small devices only (tablets, from 768px to 992px) */
+@media (min-width: @screen-sm-min) and (max-width: @screen-sm-max) { }// Small devices only
+
+/* Small devices and up (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) { }// Small devices and up
+
+/* Extra small devices (phones, less than 768px) */
+@media (max-width: @screen-xs-max) { 
+	.admin-bar-fix{ margin-top: 0px; }
+	.header-fix-size{ display: none; }
+
+	.navbar-header{ cursor: pointer; }
+	.navbar-brand{
+		//margin:0; color: @white; font-weight: 400;
+	}
+
+	#main-nav{
+		ul{ width: 100%; padding: 0;
+			li{
+				width: 100%;
+				a{
+					display: block;
+					&:hover{ }
+				}
+
+				>ul{
+					min-width: 100%;
+					position: relative;
+					display: block;
+				}
+			}// li
+		}// ul
+	}// #main-nav
+
+	.carousel-slide{ height: 180px; }
+}
