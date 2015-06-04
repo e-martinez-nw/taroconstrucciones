@@ -26,7 +26,7 @@
 
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<link href='http://fonts.googleapis.com/css?family=Raleway:400,100,200,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	
+
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	
@@ -36,7 +36,47 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.js" type=	"text/javascript"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.css">
 	
+	<!--Slide construcción-->
+	<script>
+        $(document).ready(function(){   
+	        $('#slider1').bxSlider2({
+		        captions: true,
+		        mode: 'fade',    
+		        buildPager: function(slideIndex){
+			        switch(slideIndex){
+				        case 0:
+				        return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/poli_comercial.png">';
+				        case 1:
+				        return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/poli_publico.png">';
+				        case 2:
+				        return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/poli_residencial.png">';
+					}
+				}
+			});
+		});
+	</script>
 
+	<!--Slide servicios ambientales-->
+	<script>
+		$(document).ready(function(){   
+			$('#slider2').bxSlider2({
+				captions: true,
+				mode: 'fade',    
+				buildPager: function(slideIndex){
+					switch(slideIndex){
+						case 0:
+						return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_servamb.png">';
+						case 1:
+						return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_control.png">';
+						case 2:
+						return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_greencity.png">';
+	        		}
+        		}
+        	});
+        });
+	</script>
+
+	<!--Slide desarrollos-->
 	<script>
 		$(document).ready(function(){   
 		$('#slider3').bxSlider2({

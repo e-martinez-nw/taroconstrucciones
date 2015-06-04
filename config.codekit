@@ -431,6 +431,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/slides\/desarrollos\/preventa.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 171390,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/preventa.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/preventa.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/slides\/desarrollos\/venta.jpg": {
 		"fileType": 16384,
 		"ignore": 0,

@@ -69,11 +69,21 @@ Happy Developing!
 // ====================================
 
 body{ 
-	font-size: 14px; 
+	font-size: 16px; 
 	color: @black; 
 	font-family: 'Raleway', sans-serif; }
 
-h1, h2, h3, h4, h5, h6{ font-family: @primaryFontFamily; }
+h1, h2, h3, h4, h5, h6{ 
+	font-family: 'Raleway'; 
+	font-weight: 600; 
+	text-align: left;
+}
+h1 {font-size: 50px;}
+h2 {font-size: 36px;}
+h3 {font-size: 27px;}
+h4 {font-size: 22px;}
+h5 {font-size: 18px;}
+h6 {font-size: 16px;}
 
 img{ 
 	vertical-align: top;
@@ -91,6 +101,7 @@ a{}
 
 blockquote{}
 
+section {padding: 40px 0;}
 // General Clases
 // ====================================
 
@@ -160,6 +171,14 @@ blockquote{}
 	position: fixed;
 	z-index: 99;
 	left: 0;
+	width: 70px;   
+    background-color: #D8D9DA;   
+    border-radius: 10px;   
+    display: block; 
+    text-align: center;
+    margin-left: 10px;
+    margin-top: 10px;
+    padding-top: 8px;
 
 	a {
 		position: relative;
@@ -190,6 +209,7 @@ blockquote{}
 				left: 80px;
 				top: 0;
 				.transition;
+				color: rgb(0, 179, 190);
 
 				p {
 					display: table-cell;
@@ -234,26 +254,130 @@ div#logonav {
 .carousel-control{ cursor: pointer; }
 
 
-// Clientes
+// Slide Construcción
 // ====================================
-#slidedesarrollos {
+#slideconstruccion {
+	padding: 20px 0 100px;
+
+	.bx-viewport {
+		left: 330px;
+		width: 65% !important;
+	}
+
+	.bx-caption {
+		width: 78%;
+		right: 0;
+		padding-bottom: 0;
+
+		span {
+			height: auto;
+			padding: 10px 45px;
+		}
+	}
+
+	li {
+		width: 100% important;
+		left: 0;
+		height: 500px;
+	}
 	img {width: auto;}
 
-	#poliven {
+	.bx-pager {
+		min-width: 1200px;
+		left: -210px;
+	}
+	.bx-pager-item:first-child {
 	    position: relative;   
-	    top: 45px;   
-	    left: -330px;
+	    top: 115px;   
+	    left: 5px;
 	}
 
-		#polipre {
+	.bx-pager-item {
 	    position: relative;   
-	    top: -150px;   
-	    left: 0px;
+	    top: -50px;   
+	    left: -85px;
 	}
 
-		#polides {
+	.bx-pager-item:last-child {
 	    position: relative;   
-	    top: 240px;   
+	    top: 280px;   
+	    left: -355px;
+	}
+	.bx-controls-direction {
+		position: relative;
+		top: 100px;
+		left: 28px;
+		width: 96%;
+	}
+}
+
+
+// Slide servicios
+// ====================================
+#slideservicios {
+	padding: 80px 0 100px;
+	.bx-viewport {
+		left: -180px;
+		width: 70% !important;
+	}
+
+	.bx-caption {
+		left: 140px;
+		width: 72%;
+		padding-bottom: 10px;
+	}
+	span { 
+		padding: 10px 35px;
+		height: auto;
+	}
+
+	.bx-controls-direction {
+		position: relative;
+		left: -440px;
+		width: 96%;
+		top: 150px;
+	}
+	.bx-pager-item:first-child {
+		position: relative;
+		top: 180px;
+		left: 536px;
+		display: table;
+	}
+	.bx-pager-item {
+		position: relative;
+		top: 125px;
+		left: 515px;
+	}
+	.bx-pager-item:last-child {
+		top: 300px;
+		position: relative;
+		left: 75px;
+	}
+}
+
+
+// Slide Desarrollos
+// ====================================
+#slidedesarrollos {
+	padding: 20px 0 80px;
+
+	img {width: auto;}
+
+	.bx-pager-item:first-child {
+	    position: relative;   
+	    top: 115px;   
+	    left: -156px;
+	}
+
+	.bx-pager-item {
+	    position: relative;   
+	    top: -50px;   
+	    left: -220px;
+	}
+
+	.bx-pager-item:last-child {
+	    position: relative;   
+	    top: 280px;   
 	    left: -440px;
 	}
 }
@@ -272,12 +396,16 @@ div#logonav {
 		margin: 10px;
 
 		.widget-custom-link-image {
+			line-height: 9;
+			overflow: hidden;
 
     		img {
+    			vertical-align: middle;
 				width: auto;
 				height: auto;
 				max-height: 140px;
 				max-width: 190px;
+				padding: 0 5px 8px;
 			}//img
 		}//.widget-custom-link-image
 	}//.widget-custom-link
@@ -302,10 +430,10 @@ div#logonav {
 		.textwidget {
 			p {
 				text-align: left;
-
 				&:last-child {
 					text-align: center;
 				}
+
 			}
 
 			input, textarea {
@@ -335,7 +463,14 @@ div#logonav {
 	}//.contact-form
 }//#contacto
 
-#twitter {text-align: center;}
+#twitter {
+	text-align: center;
+
+	#twitter-widget-0 {
+		width: 100%;
+		max-width: 450px;
+	}
+}
 
 
 // Footer // Your Main Footer Css goes here.
@@ -345,6 +480,8 @@ div#logonav {
 	text-align: center; 
 
 	img {width: auto;}
+
+	h2 {text-align: center;}
 }
 
 
@@ -361,6 +498,18 @@ div#logonav {
 	:-ms-input-placeholder { color: darken(@white, 30%);}
 }
 
+.bx-wrapper2 {
+	.bx-next {
+		right: -15px;
+	}
+	
+	.bx-caption{
+		right: 50px;
+		width: 54.4%;
+		min-height: 120px;
+		text-align: center;
+	}
+}
 
 // Media Queries
 // ====================================

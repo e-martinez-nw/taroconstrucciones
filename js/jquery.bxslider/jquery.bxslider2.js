@@ -696,10 +696,10 @@
 			// cycle through each child
 			slider.children.each(function(index){
 				// get the image alt attribute
-				var alt = $(this).find('img:first').attr('alt');
+				var title = $(this).find('img:first').attr('title');
 				// append the caption
-				if (alt != undefined && ('' + alt).length) {
-                    $(this).append('<div class="bx-caption"><span>' + alt + '</span></div>');
+				if (title != undefined && ('' + title).length) {
+                    $(this).append('<div class="bx-caption"><span>' + title + '</span></div>');
                 }
 			});
 		}
