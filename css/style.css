@@ -6049,6 +6049,12 @@ fieldset[disabled] .navbar-inverse .btn-link:focus {
     display: none !important;
   }
 }
+.container {
+  width: 1100px !important;
+}
+.container-fluid {
+  min-width: 1100px !important;
+}
 @font-face {
   font-family: 'OpenSans';
   font-style: normal;
@@ -6144,8 +6150,12 @@ h6 {
 }
 img {
   vertical-align: top;
-  width: 100%;
-  height: auto;
+}
+p {
+  text-align: justify;
+}
+blockquote {
+  border-left: 5px solid #00B3BE;
 }
 section {
   padding: 40px 0;
@@ -6193,6 +6203,10 @@ section {
 }
 .gallery-columns-3 .gallery-item {
   width: 33.3% !important;
+}
+.wp-caption p.wp-caption-text,
+.wp-caption-text {
+  font-size: 14px;
 }
 #main-nav ul {
   margin: 0px;
@@ -6314,6 +6328,9 @@ div#logonav {
 .carousel-control {
   cursor: pointer;
 }
+video {
+  min-width: 1100px;
+}
 #slideconstruccion {
   padding: 20px 0 100px;
 }
@@ -6322,7 +6339,7 @@ div#logonav {
   width: 65% !important;
 }
 #slideconstruccion .bx-caption {
-  width: 78%;
+  width: 75%;
   right: 0;
   padding-bottom: 0;
 }
@@ -6360,8 +6377,12 @@ div#logonav {
 #slideconstruccion .bx-controls-direction {
   position: relative;
   top: 100px;
-  left: 28px;
-  width: 96%;
+  left: 30px;
+  width: 97.5%;
+}
+#servicios img {
+  width: 100%;
+  height: auto;
 }
 #slideservicios {
   padding: 80px 0 100px;
@@ -6372,7 +6393,7 @@ div#logonav {
 }
 #slideservicios .bx-caption {
   left: 140px;
-  width: 72%;
+  width: 70.2%;
   padding-bottom: 10px;
 }
 #slideservicios span {
@@ -6381,14 +6402,14 @@ div#logonav {
 }
 #slideservicios .bx-controls-direction {
   position: relative;
-  left: -440px;
-  width: 96%;
-  top: 150px;
+  left: -441px;
+  width: 98%;
+  top: 240px;
 }
 #slideservicios .bx-pager-item:first-child {
   position: relative;
   top: 180px;
-  left: 536px;
+  left: 510px;
   display: table;
 }
 #slideservicios .bx-pager-item {
@@ -6401,6 +6422,10 @@ div#logonav {
   position: relative;
   left: 75px;
 }
+#slideservicios .bx-custom-pager {
+  top: -240px;
+  bottom: auto;
+}
 #slidedesarrollos {
   padding: 20px 0 80px;
 }
@@ -6410,17 +6435,25 @@ div#logonav {
 #slidedesarrollos .bx-pager-item:first-child {
   position: relative;
   top: 115px;
-  left: -156px;
+  left: 0;
 }
 #slidedesarrollos .bx-pager-item {
   position: relative;
   top: -50px;
-  left: -220px;
+  left: -65px;
 }
 #slidedesarrollos .bx-pager-item:last-child {
   position: relative;
   top: 280px;
-  left: -440px;
+  left: -285px;
+}
+#slidedesarrollos .bx-caption {
+  right: 40px;
+  width: 52.5%;
+}
+#slidedesarrollos .bx-custom-pager {
+  top: 60px;
+  bottom: auto;
 }
 #clientes {
   text-align: center;
@@ -6445,8 +6478,10 @@ div#logonav {
   padding: 0 5px 8px;
 }
 #contacto .textwidget {
-  text-align: center;
   padding: 20px 0;
+}
+#contacto .textwidget p {
+  text-align: center;
 }
 #contacto .textwidget .lmm-panel {
   display: none;
@@ -6496,6 +6531,9 @@ div#logonav {
 }
 #main-footer h2 {
   text-align: center;
+}
+.head-img img {
+  width: 100%;
 }
 #searchform ::-webkit-input-placeholder {
   color: #b3b3b3;

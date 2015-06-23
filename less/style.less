@@ -25,7 +25,7 @@ Happy Developing!
 @import "bootstrap.less"; // Bootstrap Docs: http://getbootstrap.com/
 
 // Bootstrap Disabling responsiveness Docs: http://getbootstrap.com/getting-started/#disable-responsive
-// .container{ width: 970px !important; } .container-fluid{ min-width: 970px !important; }
+.container{ width: 1100px !important; } .container-fluid{ min-width: 1100px !important; }
 
 //	Fix any path's of your libs Here
 // ------------------------------------
@@ -87,19 +87,21 @@ h6 {font-size: 16px;}
 
 img{ 
 	vertical-align: top;
-	width: 100%;
-	height: auto;
+	//width: 100%;
+	//height: auto;
 } // Remove 2 pixels under the image
 
 ol, ul, dl{}
 
 li{}
 
-p{}
+p{ text-align: justify;}
 
 a{}
 
-blockquote{}
+blockquote{
+	border-left: 5px solid #00B3BE;
+}
 
 section {padding: 40px 0;}
 // General Clases
@@ -149,6 +151,7 @@ section {padding: 40px 0;}
 .gallery-columns-3{
 	.gallery-item{ width: 33.3% !important; }
 }
+.wp-caption p.wp-caption-text, .wp-caption-text {font-size: 14px;}
 
 
 // Header // Your Main Header Css goes here.
@@ -253,6 +256,9 @@ div#logonav {
 
 .carousel-control{ cursor: pointer; }
 
+//Video 
+// ====================================
+video {min-width: 1100px;}
 
 // Slide Construcción
 // ====================================
@@ -265,7 +271,7 @@ div#logonav {
 	}
 
 	.bx-caption {
-		width: 78%;
+		width: 75%;
 		right: 0;
 		padding-bottom: 0;
 
@@ -306,12 +312,17 @@ div#logonav {
 	.bx-controls-direction {
 		position: relative;
 		top: 100px;
-		left: 28px;
-		width: 96%;
+		left: 30px;
+		width: 97.5%;
 	}
 }
 
-
+// Slide servicios
+// ====================================
+#servicios img {
+	width: 100%;
+	height: auto;	
+}
 // Slide servicios
 // ====================================
 #slideservicios {
@@ -323,7 +334,7 @@ div#logonav {
 
 	.bx-caption {
 		left: 140px;
-		width: 72%;
+		width: 70.2%;
 		padding-bottom: 10px;
 	}
 	span { 
@@ -333,14 +344,14 @@ div#logonav {
 
 	.bx-controls-direction {
 		position: relative;
-		left: -440px;
-		width: 96%;
-		top: 150px;
+		left: -441px;
+		width: 98%;
+		top: 240px;
 	}
 	.bx-pager-item:first-child {
 		position: relative;
 		top: 180px;
-		left: 536px;
+		left: 510px;
 		display: table;
 	}
 	.bx-pager-item {
@@ -353,6 +364,8 @@ div#logonav {
 		position: relative;
 		left: 75px;
 	}
+	.bx-custom-pager {top:-240px; bottom: auto;}
+
 }
 
 
@@ -366,20 +379,26 @@ div#logonav {
 	.bx-pager-item:first-child {
 	    position: relative;   
 	    top: 115px;   
-	    left: -156px;
+	    left: 0;
 	}
 
 	.bx-pager-item {
 	    position: relative;   
 	    top: -50px;   
-	    left: -220px;
+	    left: -65px;
 	}
 
 	.bx-pager-item:last-child {
 	    position: relative;   
 	    top: 280px;   
-	    left: -440px;
+	    left: -285px;
 	}
+
+	.bx-caption {
+		right: 40px;
+		width: 52.5%;
+	}
+	.bx-custom-pager {top:60px; bottom: auto;}
 }
 
 
@@ -418,8 +437,9 @@ div#logonav {
 // ====================================
 #contacto {
 	.textwidget {
-		text-align: center;
 		padding: 20px 0;
+		
+		p {text-align: center;}
 
 		.lmm-panel {
 			display: none;
@@ -430,10 +450,9 @@ div#logonav {
 		.textwidget {
 			p {
 				text-align: left;
-				&:last-child {
-					text-align: center;
-				}
-
+			&:last-child {
+				text-align: center;
+			}
 			}
 
 			input, textarea {
@@ -484,6 +503,11 @@ div#logonav {
 	h2 {text-align: center;}
 }
 
+
+
+//	Page
+// ====================================
+.head-img img {width: 100%;}
 
 
 //	Components

@@ -156,13 +156,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/img\/background\/NwField-1366x768.png": {
-		"fileType": 32768,
+	"\/img\/index\/header.jpg": {
+		"fileType": 16384,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 65540,
-		"inputAbbreviatedPath": "\/img\/background\/NwField-1366x768.png",
-		"outputAbbreviatedPath": "\/img\/background\/NwField-1366x768.png",
+		"initialSize": 63418,
+		"inputAbbreviatedPath": "\/img\/index\/header.jpg",
+		"outputAbbreviatedPath": "\/img\/index\/header.jpg",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0

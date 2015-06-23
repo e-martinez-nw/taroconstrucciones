@@ -1,7 +1,9 @@
 <?php get_header(); ?>
-	
-	<div class="container">
-		<div class="col-sm-12">
+	<div class="head-img">
+		<img src="<?php bloginfo('template_url')?>/img/index/header.jpg" />
+	</div><!--.head-img-->
+	<div class="container" id="page">
+		<div class="col-sm-10 col-sm-offset-1">
 			<?php if (have_posts()) : ?> 
 				<?php while (have_posts()) : the_post(); ?>
 

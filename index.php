@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<div id="top"></div>
 <video width="100%" height="auto" autoplay loop>
   <source src="<?php bloginfo('template_url')?>/img/index/video.mp4" type="video/mp4">
 Your browser does not support the video tag.
@@ -17,18 +17,21 @@ $nosotros_query = new WP_Query( $nosotros_args );
 
 
 <?php if ($nosotros_query->have_posts()) : // Show latest posts as default ?>
-	<?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'header-thumb' ); $url = $thumb['0']; ?> <section id="nosotros" style="background-image:url(<?=$url?>); background-position:center; background-size:cover;">
+	<?php while ($nosotros_query->have_posts()) : $nosotros_query->the_post(); ?>
+		<?php
+			$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+		?> 
 		<div class="container">
 			<div class="col-sm-10 col-xs-offset-1">
-				<?php while ($nosotros_query->have_posts()) : $nosotros_query->the_post(); ?>
+				<section id="nosotros" style="background-image:url('<?php echo $thumb[0]; ?>'); background-position:center; background-size:cover;">
 					<article>
 						<h1> <?php the_title(); ?> </h1>
 						<?php the_content(); ?>
 					</article>
-				<?php endwhile; wp_reset_postdata(); ?>
+				</section><!--#nosotros-->
 			</div><!--.col-sm-10-->
 		</div><!--.container-->
-	</section><!--#nosotros-->
+				<?php endwhile; wp_reset_postdata(); ?>
 <?php endif; ?>
 
 

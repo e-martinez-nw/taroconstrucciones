@@ -36,66 +36,56 @@
 	<script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.js" type=	"text/javascript"></script>
 	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.css">
 	
-	<!--Slide construcción-->
-	<script>
-        $(document).ready(function(){   
-	        $('#slider1').bxSlider2({
-		        captions: true,
-		        mode: 'fade',    
-		        buildPager: function(slideIndex){
-			        switch(slideIndex){
-				        case 0:
-				        return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/poli_comercial.png">';
-				        case 1:
-				        return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/poli_publico.png">';
-				        case 2:
-				        return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/poli_residencial.png">';
-					}
-				}
-			});
-		});
-	</script>
 
-	<!--Slide servicios ambientales-->
-	<script>
-		$(document).ready(function(){   
-			$('#slider2').bxSlider2({
-				captions: true,
-				mode: 'fade',    
-				buildPager: function(slideIndex){
-					switch(slideIndex){
-						case 0:
-						return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_servamb.png">';
-						case 1:
-						return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_control.png">';
-						case 2:
-						return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_greencity.png">';
+	<?php if (is_home()): ?>
+		<!--Slide construcción-->
+		<script>
+	        $(document).ready(function(){   
+		        $('#slider1').bxSlider2({
+			        captions: true,
+			        mode: 'fade',    
+			        buildPager: function(slideIndex){
+				        switch(slideIndex){
+					        case 0:
+					        return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/poli_comercial.png">';
+					        case 1:
+					        return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/poli_publico.png">';
+					        case 2:
+					        return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/poli_residencial.png">';
+						}
+					}
+				});  
+				$('#slider2').bxSlider2({
+					captions: true,
+					mode: 'fade',    
+					buildPager: function(slideIndex){
+						switch(slideIndex){
+							case 0:
+							return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_servamb.png">';
+							case 1:
+							return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_control.png">';
+							case 2:
+							return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_greencity.png">';
+		        		}
 	        		}
-        		}
-        	});
-        });
-	</script>
-
-	<!--Slide desarrollos-->
-	<script>
-		$(document).ready(function(){   
-		$('#slider3').bxSlider2({
-				captions: true,
-				mode: 'fade',    
-				buildPager: function(slideIndex){
-					switch(slideIndex){
-						case 0:
-							return '<img id="polipre" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_preventa.png">';
-						case 1:
-							return '<img id="poliven" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_venta.png">';
-						case 2:
-							return '<img id="polides" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_desarrollos.png">';
+	        	}); 
+				$('#slider3').bxSlider2({
+					captions: true,
+					mode: 'fade',    
+					buildPager: function(slideIndex){
+						switch(slideIndex){
+							case 0:
+								return '<img id="polipre" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_preventa.png">';
+							case 1:
+								return '<img id="poliven" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_venta.png">';
+							case 2:
+								return '<img id="polides" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_desarrollos.png">';
+						}
 					}
-				}
+				});
 			});
-		});
-	</script>
-
+		</script>
+	<?php endif; ?>
 	<?php wp_head(); // wordpress admin-bar functions ?>
 
 	<?php // Your Google Analytics goes here. ?>
@@ -106,7 +96,7 @@
 	<header id="main-header">
     <?php if(is_active_sidebar('main-nav')): ?>
 		<div class="main-nav">
-						<?php dynamic_sidebar( 'main-nav' ); ?>
+			<?php dynamic_sidebar( 'main-nav' ); ?>
 		</div><!--.main-nav-->
 	<?php endif; ?>
 
