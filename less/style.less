@@ -260,6 +260,29 @@ div#logonav {
 // ====================================
 video {min-width: 1100px;}
 
+//Títulos de slides 
+// ====================================
+.bx-pager-item a:hover {
+	&:before {
+		display: block;
+		transition: .2s;
+	}
+}
+
+.bx-pager-item a::before {
+	position: absolute;
+	top: 96px;
+	left: 0;
+	width: 100%;
+	font-size: 30px;
+	color: white;
+	background-color: rgba(0, 179, 190, .6);
+	border-radius: 5px;
+	padding: 10px;
+
+	.none;
+}
+
 // Slide Construcción
 // ====================================
 #slideconstruccion {
@@ -296,18 +319,27 @@ video {min-width: 1100px;}
 	    position: relative;   
 	    top: 115px;   
 	    left: 5px;
+
+	    a::before {content: "Comercial";}
 	}
 
 	.bx-pager-item {
 	    position: relative;   
 	    top: -50px;   
 	    left: -85px;
+
+	    a::before {
+	    	content: "Sector Público";
+	    	top: 86px;
+	    }
 	}
 
 	.bx-pager-item:last-child {
 	    position: relative;   
 	    top: 280px;   
 	    left: -355px;
+
+	    a::before {content: "Residencial";}
 	}
 	.bx-controls-direction {
 		position: relative;
@@ -353,16 +385,34 @@ video {min-width: 1100px;}
 		top: 180px;
 		left: 510px;
 		display: table;
+
+		a::before {
+			content: "Campañas Anti Fauna Nociva";
+			top: 46px;
+			width: 80%;
+			left: 10%;
+		}
+
 	}
 	.bx-pager-item {
 		position: relative;
 		top: 125px;
 		left: 515px;
+
+		a::before {
+			content: "Control de Plagas";
+			top: 66px;
+		}
 	}
 	.bx-pager-item:last-child {
 		top: 300px;
 		position: relative;
 		left: 75px;
+
+		a::before {
+			content: "Estudios Ambientales";
+			top: 66px;
+		}
 	}
 	.bx-custom-pager {top:-240px; bottom: auto;}
 
@@ -380,18 +430,24 @@ video {min-width: 1100px;}
 	    position: relative;   
 	    top: 115px;   
 	    left: 0;
+
+		a::before {content: "Preventa"}
 	}
 
 	.bx-pager-item {
 	    position: relative;   
 	    top: -50px;   
 	    left: -65px;
+
+		a::before {content: "Venta"}
 	}
 
 	.bx-pager-item:last-child {
 	    position: relative;   
 	    top: 280px;   
 	    left: -285px;
+
+	    a::before {content: "Desarrollos"}
 	}
 
 	.bx-caption {

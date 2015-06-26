@@ -6331,6 +6331,22 @@ div#logonav {
 video {
   min-width: 1100px;
 }
+.bx-pager-item a:hover:before {
+  display: block;
+  transition: .2s;
+}
+.bx-pager-item a::before {
+  position: absolute;
+  top: 96px;
+  left: 0;
+  width: 100%;
+  font-size: 30px;
+  color: white;
+  background-color: rgba(0, 179, 190, 0.6);
+  border-radius: 5px;
+  padding: 10px;
+  display: none;
+}
 #slideconstruccion {
   padding: 20px 0 100px;
 }
@@ -6364,15 +6380,25 @@ video {
   top: 115px;
   left: 5px;
 }
+#slideconstruccion .bx-pager-item:first-child a::before {
+  content: "Comercial";
+}
 #slideconstruccion .bx-pager-item {
   position: relative;
   top: -50px;
   left: -85px;
 }
+#slideconstruccion .bx-pager-item a::before {
+  content: "Sector Público";
+  top: 86px;
+}
 #slideconstruccion .bx-pager-item:last-child {
   position: relative;
   top: 280px;
   left: -355px;
+}
+#slideconstruccion .bx-pager-item:last-child a::before {
+  content: "Residencial";
 }
 #slideconstruccion .bx-controls-direction {
   position: relative;
@@ -6412,15 +6438,29 @@ video {
   left: 510px;
   display: table;
 }
+#slideservicios .bx-pager-item:first-child a::before {
+  content: "Campañas Anti Fauna Nociva";
+  top: 46px;
+  width: 80%;
+  left: 10%;
+}
 #slideservicios .bx-pager-item {
   position: relative;
   top: 125px;
   left: 515px;
 }
+#slideservicios .bx-pager-item a::before {
+  content: "Control de Plagas";
+  top: 66px;
+}
 #slideservicios .bx-pager-item:last-child {
   top: 300px;
   position: relative;
   left: 75px;
+}
+#slideservicios .bx-pager-item:last-child a::before {
+  content: "Estudios Ambientales";
+  top: 66px;
 }
 #slideservicios .bx-custom-pager {
   top: -240px;
@@ -6437,15 +6477,24 @@ video {
   top: 115px;
   left: 0;
 }
+#slidedesarrollos .bx-pager-item:first-child a::before {
+  content: "Preventa";
+}
 #slidedesarrollos .bx-pager-item {
   position: relative;
   top: -50px;
   left: -65px;
 }
+#slidedesarrollos .bx-pager-item a::before {
+  content: "Venta";
+}
 #slidedesarrollos .bx-pager-item:last-child {
   position: relative;
   top: 280px;
   left: -285px;
+}
+#slidedesarrollos .bx-pager-item:last-child a::before {
+  content: "Desarrollos";
 }
 #slidedesarrollos .bx-caption {
   right: 40px;
