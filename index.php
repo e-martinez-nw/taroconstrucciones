@@ -85,40 +85,50 @@ $nosotros_query = new WP_Query( $nosotros_args );
 
 <section id="desarrollos">
 	<div class="container">
-<!--			<?php
-
-			$desarrollos1_args = array(
-				'post_type' => 'page',
-				'name' => 'desarrollos1'
-				);
-
-			$desarrollos1_query = new WP_Query( $desarrollos1_args );
-			?>
-
-			<?php if ($desarrollos1_query->have_posts()) : // Show latest posts as default ?>
-				<div class="container">
-					<div class="col-sm-10 col-xs-offset-1">
-						<h1>Desarrollos en venta</h1>
-						<?php while ($desarrollos1_query->have_posts()) : $desarrollos1_query->the_post(); ?>
-							<?php the_content(); ?>
-						<?php endwhile; wp_reset_postdata(); ?>
-					</div><!--.col-sm-10-->
-				<!--</div><!--.container-->
-
-			<!--<?php endif; ?>-->
 		<div class="col-sm-10 col-xs-offset-1">
 			<h2>Desarrollos en venta</h2>
 			<div id="slidedesarrollos">
-	        <ul id="slider3">
-	            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/preventa.jpg" width="500" height="600" title="Descripción próximamente"></li>
-	            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta.jpg" width="500" height="600" title="Descripción próximamente"></li>
-	            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/desarrollos.jpg" width="500" height="600" title="Descripción próximamente"></li>
-	        </ul>
-	        </div>
-		</div>
-	</div>
+		        <ul id="slider3">
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/preventa.jpg" width="500" height="600" title="Preventa"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/exterior.jpg" width="500" height="600" title="8 Departamentos de Interés Medio"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/interior.jpg" width="500" height="600" title="Acabados del interior"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/planta3.jpg" width="500" height="600" title="&#8226;3 Recámaras &#8226;2 Balcones en 2 Recámaras<br/> &#8226;3 Baños Completos &#8226;1 Balcón en Sala Comedor <br/>&#8226;2 Estacionamientos"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/plantab.jpg" width="500" height="600" title="&#8226;1 Recámara <br/>&#8226;1 ½ Baños"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/plantac.jpg" width="500" height="600" title="&#8226;2 Recámaras con Balcón &#8226;2 ½ Baños <br/> &#8226;2 Estacionamientos &#8226;1 Balcón en Sala Comedor"></li>
+		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/desarrollos.jpg" width="500" height="600" title="Desarrollos"></li>
+		        </ul>
+	        </div><!--#slidedesarrollos-->
+		</div><!--.col-sm-10-->
+	</div><!--.container-->
 
+	<!--<?php
+	$desarrollos1_args = array(
+		'post_type' => 'page',
+		'name' => 'desarrollos1'
+		);
 
+	$desarrollos1_query = new WP_Query( $desarrollos1_args );
+	?>
+
+	<?php if ($desarrollos1_query->have_posts()) : // Show latest posts as default ?>
+		<div class="container">
+			<div class="col-sm-10 col-xs-offset-1">
+				<?php while ($desarrollos1_query->have_posts()) : $desarrollos1_query->the_post(); ?>
+					<?php the_content(); ?>
+				<?php endwhile; wp_reset_postdata(); ?>
+			</div><!--.col-sm-10-->
+		</div><!--.container-->
+	<!--<?php endif; ?>-->
+
+	<?php if(is_active_sidebar('descarga-pdf')): ?>
+		<div class="container button">
+			<div class="row">
+				<div class="col-sm-10 col-xs-offset-1">
+					<?php dynamic_sidebar( 'descarga-pdf' ); ?>
+				</div><!--.col-sm-10 col-xs-offset-1-->
+			</div><!--.row-->
+		</div><!--.container-->
+	<?php endif; ?>
 </section>
 
 <section id="clientes">

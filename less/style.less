@@ -426,6 +426,10 @@ video {min-width: 1100px;}
 
 	img {width: auto;}
 
+	.bx-pager-item:nth-child(3), .bx-pager-item:nth-child(4), .bx-pager-item:nth-child(5), .bx-pager-item:nth-child(6),  {
+		.none
+	}
+
 	.bx-pager-item:first-child {
 	    position: relative;   
 	    top: 115px;   
@@ -457,6 +461,23 @@ video {min-width: 1100px;}
 	.bx-custom-pager {top:60px; bottom: auto;}
 }
 
+.button {
+	text-align: center;
+	padding: 50px 0;
+
+	.primary-button {
+		display: inline-block;
+
+		a {
+			padding: 10px 15px 1px;
+			display: block;
+			border-radius: 5px;
+			background-color: #00B3BE;
+			color: @white;
+			font-size: 18px;
+		}
+	}
+}
 
 // Clientes
 // ====================================

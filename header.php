@@ -78,7 +78,7 @@
 								return '<img id="polipre" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_preventa.png">';
 							case 1:
 								return '<img id="poliven" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_venta.png">';
-							case 2:
+							case 6:
 								return '<img id="polides" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_desarrollos.png">';
 						}
 					}
@@ -101,7 +101,3 @@
 	<?php endif; ?>
 
 	</header><!-- /#main-header -->
-
-
-
-

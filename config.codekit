@@ -453,6 +453,61 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/slides\/desarrollos\/venta\/exterior.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.86637e+06,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/exterior.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/exterior.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/desarrollos\/venta\/interior.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.20232e+06,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/interior.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/interior.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/desarrollos\/venta\/planta3.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 4.37724e+06,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/planta3.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/planta3.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/desarrollos\/venta\/plantab.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.76888e+06,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/plantab.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/plantab.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/img\/slides\/desarrollos\/venta\/plantac.jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 1.64447e+06,
+		"inputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/plantac.jpg",
+		"outputAbbreviatedPath": "\/img\/slides\/desarrollos\/venta\/plantac.jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/slides\/poli_comercial.png": {
 		"fileType": 32768,
 		"ignore": 0,

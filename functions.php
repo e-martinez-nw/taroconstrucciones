@@ -107,6 +107,16 @@ function nw_register_sidebars() {
 	));
 
 	register_sidebar(array(
+		'id' => 'descarga-pdf', // Change the id
+		'name' => 'Enlace para Descarga de PDF', // Change the name
+		'description' => 'The first (primary) sidebar.',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget' => '</div>',
+		'before_title' => '<h4 class="widgettitle">',
+		'after_title' => '</h4>',
+	));
+
+	register_sidebar(array(
 		'id' => 'clientes', // Change the id
 		'name' => 'Clientes', // Change the name
 		'description' => 'The first (primary) sidebar.',
