@@ -2811,6 +2811,11 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  width: 400px;
+  height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .img-rounded {
   border-radius: 6px;
@@ -6319,211 +6324,100 @@ div#logonav {
 .active {
   background-position: -60px 0;
 }
-.carousel-slide {
-  height: 460px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+[id^="carousel-gallery-"] {
+  display: none;
 }
-.carousel-control {
-  cursor: pointer;
+[id^="carousel-gallery-"].visible {
+  display: block;
+  transition: .1s;
 }
 video {
   min-width: 1100px;
 }
-.bx-pager-item a:hover:before {
-  display: block;
-  transition: .2s;
+#construccion,
+#servicios-de-medio-ambiente,
+#desarrollos-en-venta {
+  height: 555px;
 }
-.bx-pager-item a::before {
-  position: absolute;
-  top: 96px;
-  left: 0;
-  width: 100%;
-  font-size: 30px;
-  color: white;
-  background-color: rgba(0, 179, 190, 0.6);
-  border-radius: 5px;
-  padding: 10px;
-  display: none;
-}
-#slideconstruccion {
-  padding: 20px 0 100px;
-}
-#slideconstruccion .bx-viewport {
-  left: 330px;
-  width: 65% !important;
-}
-#slideconstruccion .bx-caption {
-  width: 75%;
+#construccion .relative .feature-img:nth-child(1),
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(1),
+#desarrollos-en-venta .relative .feature-img:nth-child(1) {
   right: 0;
-  padding-bottom: 0;
+  top: 0;
 }
-#slideconstruccion .bx-caption span {
-  height: auto;
-  padding: 10px 45px;
+#construccion .relative .feature-img:nth-child(2),
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(2),
+#desarrollos-en-venta .relative .feature-img:nth-child(2) {
+  top: 125px;
+  left: -50px;
 }
-#slideconstruccion li {
-  width: 100% important;
+#construccion .relative .feature-img:nth-child(3),
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(3),
+#desarrollos-en-venta .relative .feature-img:nth-child(3) {
+  top: 250px;
+  right: 0;
+}
+#servicios-de-medio-ambiente .relative .feature-img:hover h1 {
+  display: table;
+  padding: 10px;
+}
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(1),
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(3) {
   left: 0;
+}
+#servicios-de-medio-ambiente .relative .feature-img:nth-child(2) {
+  left: 210px;
+}
+.feature-img {
+  position: absolute;
+  overflow: hidden;
+  height: 235px;
+  width: 270px;
+  cursor: pointer;
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+.feature-img h1 {
+  position: absolute;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 179, 190, 0.6);
+  margin: auto;
+  height: 50px;
+  padding: 10px 0;
+  line-height: 1em;
+  z-index: 2;
+  border-radius: 10px;
+  display: none;
+  transition: .1s;
+}
+.feature-img img {
+  width: 100%;
+  height: 100%;
+}
+.feature-img:hover h1 {
+  display: block;
+  transition: .1s;
+}
+.img-responsive,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 400px;
   height: 500px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
-#slideconstruccion img {
-  width: auto;
-}
-#slideconstruccion .bx-pager {
-  min-width: 1200px;
-  left: -210px;
-}
-#slideconstruccion .bx-pager-item:first-child {
-  position: relative;
-  top: 115px;
-  left: 5px;
-}
-#slideconstruccion .bx-pager-item:first-child a::before {
-  content: "Comercial";
-}
-#slideconstruccion .bx-pager-item {
-  position: relative;
-  top: -50px;
-  left: -85px;
-}
-#slideconstruccion .bx-pager-item a::before {
-  content: "Sector Público";
-  top: 86px;
-}
-#slideconstruccion .bx-pager-item:last-child {
-  position: relative;
-  top: 280px;
-  left: -355px;
-}
-#slideconstruccion .bx-pager-item:last-child a::before {
-  content: "Residencial";
-}
-#slideconstruccion .bx-controls-direction {
-  position: relative;
-  top: 100px;
-  left: 30px;
-  width: 97.5%;
-}
-#servicios img {
+#urbanizacion img {
   width: 100%;
   height: auto;
-}
-#slideservicios {
-  padding: 80px 0 100px;
-}
-#slideservicios .bx-viewport {
-  left: -180px;
-  width: 70% !important;
-}
-#slideservicios .bx-caption {
-  left: 140px;
-  width: 70.2%;
-  padding-bottom: 10px;
-}
-#slideservicios span {
-  padding: 10px 35px;
-  height: auto;
-}
-#slideservicios .bx-controls-direction {
-  position: relative;
-  left: -441px;
-  width: 98%;
-  top: 240px;
-}
-#slideservicios .bx-pager-item:first-child {
-  position: relative;
-  top: 180px;
-  left: 510px;
-  display: table;
-}
-#slideservicios .bx-pager-item:first-child a::before {
-  content: "Campañas Anti Fauna Nociva";
-  top: 46px;
-  width: 80%;
-  left: 10%;
-}
-#slideservicios .bx-pager-item {
-  position: relative;
-  top: 125px;
-  left: 515px;
-}
-#slideservicios .bx-pager-item a::before {
-  content: "Control de Plagas";
-  top: 66px;
-}
-#slideservicios .bx-pager-item:last-child {
-  top: 300px;
-  position: relative;
-  left: 75px;
-}
-#slideservicios .bx-pager-item:last-child a::before {
-  content: "Estudios Ambientales";
-  top: 66px;
-}
-#slideservicios .bx-custom-pager {
-  top: -240px;
-  bottom: auto;
-}
-#slidedesarrollos {
-  padding: 20px 0 80px;
-}
-#slidedesarrollos img {
-  width: auto;
-}
-#slidedesarrollos .bx-pager-item:nth-child(3),
-#slidedesarrollos .bx-pager-item:nth-child(4),
-#slidedesarrollos .bx-pager-item:nth-child(5),
-#slidedesarrollos .bx-pager-item:nth-child(6) {
-  display: none;
-}
-#slidedesarrollos .bx-pager-item:first-child {
-  position: relative;
-  top: 115px;
-  left: 0;
-}
-#slidedesarrollos .bx-pager-item:first-child a::before {
-  content: "Preventa";
-}
-#slidedesarrollos .bx-pager-item {
-  position: relative;
-  top: -50px;
-  left: -65px;
-}
-#slidedesarrollos .bx-pager-item a::before {
-  content: "Venta";
-}
-#slidedesarrollos .bx-pager-item:last-child {
-  position: relative;
-  top: 280px;
-  left: -285px;
-}
-#slidedesarrollos .bx-pager-item:last-child a::before {
-  content: "Desarrollos";
-}
-#slidedesarrollos .bx-caption {
-  right: 40px;
-  width: 52.5%;
-}
-#slidedesarrollos .bx-custom-pager {
-  top: 60px;
-  bottom: auto;
-}
-.button {
-  text-align: center;
-  padding: 50px 0;
-}
-.button .primary-button {
-  display: inline-block;
-}
-.button .primary-button a {
-  padding: 10px 15px 1px;
-  display: block;
-  border-radius: 5px;
-  background-color: #00B3BE;
-  color: #ffffff;
-  font-size: 18px;
 }
 #clientes {
   text-align: center;
@@ -6546,6 +6440,24 @@ video {
   max-height: 140px;
   max-width: 190px;
   padding: 0 5px 8px;
+}
+.button {
+  text-align: center;
+}
+.button a {
+  display: inline-block;
+  padding: 10px 25px 1px;
+  border-radius: 5px;
+  background-color: #00b3be;
+  transition: .1s;
+}
+.button a p {
+  color: #ffffff;
+}
+.button a:hover {
+  text-decoration: none;
+  background-color: #005358;
+  transition: .1s;
 }
 #contacto .textwidget {
   padding: 20px 0;

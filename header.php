@@ -30,62 +30,8 @@
 	<script src="http://code.jquery.com/jquery-latest.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider.min.js" type="text/javascript"></script>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider.css">
-	
-	<script src="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.js" type=	"text/javascript"></script>
-	<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/js/jquery.bxslider/jquery.bxslider2.css">
-	
 
-	<?php if (is_home()): ?>
-		<!--Slide construcción-->
-		<script>
-	        $(document).ready(function(){   
-		        $('#slider1').bxSlider2({
-			        captions: true,
-			        mode: 'fade',    
-			        buildPager: function(slideIndex){
-				        switch(slideIndex){
-					        case 0:
-					        return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/poli_comercial.png">';
-					        case 1:
-					        return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/poli_publico.png">';
-					        case 2:
-					        return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/poli_residencial.png">';
-						}
-					}
-				});  
-				$('#slider2').bxSlider2({
-					captions: true,
-					mode: 'fade',    
-					buildPager: function(slideIndex){
-						switch(slideIndex){
-							case 0:
-							return '<img id="policom" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_servamb.png">';
-							case 1:
-							return '<img id="polipub" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_control.png">';
-							case 2:
-							return '<img id="polires" src="<?php bloginfo('template_url')?>/img/slides/ambientales/poli_greencity.png">';
-		        		}
-	        		}
-	        	}); 
-				$('#slider3').bxSlider2({
-					captions: true,
-					mode: 'fade',    
-					buildPager: function(slideIndex){
-						switch(slideIndex){
-							case 0:
-								return '<img id="polipre" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_preventa.png">';
-							case 1:
-								return '<img id="poliven" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_venta.png">';
-							case 6:
-								return '<img id="polides" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/poli_desarrollos.png">';
-						}
-					}
-				});
-			});
-		</script>
-	<?php endif; ?>
+	
 	<?php wp_head(); // wordpress admin-bar functions ?>
 
 	<?php // Your Google Analytics goes here. ?>

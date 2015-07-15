@@ -39,86 +39,49 @@ $nosotros_query = new WP_Query( $nosotros_args );
 	<div class="container">
 		<div class="col-sm-10 col-xs-offset-1">
 			<h1>Servicios</h1>
+			<?php echo hexagon_gallery('construccion'); ?>
 
-			<h2>Construcción</h2>
-			<div id="slideconstruccion">
-		        <ul id="slider1">
-		            <li><img style="position:relative; left:140px;" src="<?php bloginfo('template_url')?>/img/slides/comercial.jpg" width="642" height="400" title="Con una amplia trayectoria en el área comercial, ofrecemos los servicios de construcción, remodelación, mantenimiento y proyecto llave en mano. Nuestras propuestas generan impacto y atracción hacia los puntos de venta, donde incluimos diseño y funcionalidad."></li>
-		            <li><img style="position:relative; left:140px;" src="<?php bloginfo('template_url')?>/img/slides/publico.jpg" width="642" height="400" title="Contamos con un extenso historial de trabajos realizados, entre ellos, la construcción,  reestructuración y remodelación integral de edificios del sector público,  construcción de vivienda, construcción y remodelación de escuelas y CENDIS, construcción de unidades deportivas; entre otros."></li>
-		            <li><img style="position:relative; left:140px;" class="centerslideimage" src="<?php bloginfo('template_url')?>/img/slides/residencial.jpg" width="642" height="400" title="Analizando todas las variables en cuanto a las condiciones del lugar, presupuesto, programa, clima, gustos y preferencias, desarrollamos conceptos únicos y flexibles, que se adaptan con el tiempo a los cambios que va requiriendo el usuario."></li>
-		        </ul>
-	        </div>
-
-			<?php
-
-			$urbaniza_args = array(
+			<div class="clearfix"></div>
+			
+			<?php 
+			$urbanizacion_args = array(
 				'post_type' => 'page',
 				'name' => 'urbanizacion'
 				);
 
-			$urbaniza_query = new WP_Query( $urbaniza_args );
+			$urbanizacion_query = new WP_Query( $urbanizacion_args );
 			?>
 
-			<?php if ($urbaniza_query->have_posts()) : // Show latest posts as default ?>
-						<?php while ($urbaniza_query->have_posts()) : $urbaniza_query->the_post(); ?>
-							<article>
-								<h2> <?php the_title(); ?> </h2>
-								<?php the_content(); ?>
-							</article>
-						<?php endwhile; wp_reset_postdata(); ?>
 
+			<?php if ($urbanizacion_query->have_posts()) : // Show latest posts as default ?>
+				<?php while ($urbanizacion_query->have_posts()) : $urbanizacion_query->the_post(); ?>
+					<?php
+						$thumb = wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'full');
+					?> 
+					<section id="urbanizacion" style="background-image:url('<?php echo $thumb[0]; ?>'); background-position:center; background-size:cover;">
+						<article>
+							<h1> <?php the_title(); ?> </h1>
+							<?php the_content(); ?>
+						</article>
+					</section><!--#urbanizacion-->
+				<?php endwhile; wp_reset_postdata(); ?>
 			<?php endif; ?>
 
-			<h1>Servicios de Medio Ambiente</h1>
-        <!---Agregar Slideshow--> 
-     <div id="slideservicios">
-        <ul id="slider2">
-            <li><img style="position:relative; left:140px;" src="<?php bloginfo('template_url')?>/img/slides/ambientales/servamb.jpg" width="642" height="400" title="Parte importante de la organización es el área dedicada al medio ambiente. Con más de 40 años dedicados al control de fauna nociva y medio ambiente en urbes y desarrollos turísticos como Cancún, Los Cabos, Huatulco y más, hemos implementado con el equipo más experimentado, metodologías y servicio únicos, garantizando total satisfacción del resultado en nuestros trabajos."></li>
-            <li><img style="position:relative; left:140px;" src="<?php bloginfo('template_url')?>/img/slides/ambientales/control.jpg" width="642" height="400" title="Comprende acciones para el control de insectos y roedores, potencialmente perjudiciales a la salud y bienestar del ser humano. Se utilizan métodos específicos con productos y tecnología de vanguardia, autorizados por los organismos nacionales e internacionales facultados.Se ejecutan en áreas naturales urbanas, infraestructura, inmuebles, entre otros."></li>
-            <li><img style="position:relative; left:140px;" class="centerslideimage" src="<?php bloginfo('template_url')?>/img/slides/ambientales/greencity.jpg" width="642" height="400" title="Estudios multidisciplinarios: Son estudios de análisis de proyectos diversos que concluyen en el establecimiento de un plan maestro de desarrollo auto sostenible."></li>
-        </ul>
-        </div>    
+			<?php echo hexagon_gallery('servicios de medio ambiente', 'right'); ?>
+
+			<div class="clearfix"></div>
 
 		</div><!--.col-sm-10-->
 	</div><!--.container-->
 </section><!--#servicios-->
-
+			
 <section id="desarrollos">
 	<div class="container">
 		<div class="col-sm-10 col-xs-offset-1">
-			<h2>Desarrollos en venta</h2>
-			<div id="slidedesarrollos">
-		        <ul id="slider3">
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/preventa.jpg" width="500" height="600" title="Preventa"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/exterior.jpg" width="500" height="600" title="8 Departamentos de Interés Medio"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/interior.jpg" width="500" height="600" title="Acabados del interior"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/planta3.jpg" width="500" height="600" title="&#8226;3 Recámaras &#8226;2 Balcones en 2 Recámaras<br/> &#8226;3 Baños Completos &#8226;1 Balcón en Sala Comedor <br/>&#8226;2 Estacionamientos"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/plantab.jpg" width="500" height="600" title="&#8226;1 Recámara <br/>&#8226;1 ½ Baños"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/venta/plantac.jpg" width="500" height="600" title="&#8226;2 Recámaras con Balcón &#8226;2 ½ Baños <br/> &#8226;2 Estacionamientos &#8226;1 Balcón en Sala Comedor"></li>
-		            <li><img style="position:relative; left:370px; top:0px;" src="<?php bloginfo('template_url')?>/img/slides/desarrollos/desarrollos.jpg" width="500" height="600" title="Desarrollos"></li>
-		        </ul>
-	        </div><!--#slidedesarrollos-->
+			<?php echo hexagon_gallery('desarrollos en venta'); ?>
 		</div><!--.col-sm-10-->
 	</div><!--.container-->
-
-	<!--<?php
-	$desarrollos1_args = array(
-		'post_type' => 'page',
-		'name' => 'desarrollos1'
-		);
-
-	$desarrollos1_query = new WP_Query( $desarrollos1_args );
-	?>
-
-	<?php if ($desarrollos1_query->have_posts()) : // Show latest posts as default ?>
-		<div class="container">
-			<div class="col-sm-10 col-xs-offset-1">
-				<?php while ($desarrollos1_query->have_posts()) : $desarrollos1_query->the_post(); ?>
-					<?php the_content(); ?>
-				<?php endwhile; wp_reset_postdata(); ?>
-			</div><!--.col-sm-10-->
-		</div><!--.container-->
-	<!--<?php endif; ?>-->
+</section><!--.desarrollos-->
 
 	<?php if(is_active_sidebar('descarga-pdf')): ?>
 		<div class="container button">

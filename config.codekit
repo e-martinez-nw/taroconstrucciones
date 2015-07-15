@@ -508,6 +508,17 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
+	"\/img\/slides\/pixel.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 927,
+		"inputAbbreviatedPath": "\/img\/slides\/pixel.png",
+		"outputAbbreviatedPath": "\/img\/slides\/pixel.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
 	"\/img\/slides\/poli_comercial.png": {
 		"fileType": 32768,
 		"ignore": 0,

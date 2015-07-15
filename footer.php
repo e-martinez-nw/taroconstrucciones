@@ -8,6 +8,8 @@
 		</footer>
 		
 		<?php // Load styles and scripts from functions.php nw_enqueue_scripts() function ?>
+
+		<script src="<?php bloginfo('template_url'); ?>/js/scripts.js" type="text/javascript"></script>
 		
 		<script>window.twttr = (function(d, s, id) {
 			var js, fjs = d.getElementsByTagName(s)[0],

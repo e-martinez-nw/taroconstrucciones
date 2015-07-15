@@ -24,8 +24,8 @@ require_once( 'lib/ftscratch-support/theme_support.php' );
 function nw_enqueue_scripts(){
 	wp_enqueue_style( 'nw_style', get_template_directory_uri(). '/css/style.css' );
 	wp_enqueue_script( 'jquery', get_template_directory_uri(). '/js/jquery-1.11.1.min.js', '1.11.1' , false );
-	// wp_enqueue_script( 'nw-scripts',  get_template_directory_uri(). '/lib/bootstrap-3.3.1/dist/js/bootstrap.min.js', [], '3.3.1', true );
-	wp_enqueue_script( 'nw-scripts',  get_template_directory_uri(). '/js/scripts.js', [], '4.2', true );
+	wp_enqueue_script( 'nw-scripts',  get_template_directory_uri(). '/lib/bootstrap-3.3.1/dist/js/bootstrap.min.js', [], '3.3.1', true );
+	wp_enqueue_script( 'nw-scripts',  get_template_directory_uri(). '/js/scripts.js');
 }
 add_action( 'wp_enqueue_scripts', 'nw_enqueue_scripts');
 
@@ -352,7 +352,79 @@ function nw_breadcrumbs(){
 require_once( 'widget/widget-custom-link.php' ); // Agrega un custom url, icon o imagen.
 require_once( 'widget/widget-main-nav.php' ); // Agrega un custom url, icon o imagen.
 
+function hexagon_gallery($parent_name, $side){ ?>
+	<div id="<?php echo get_page_by_title($parent_name)->post_name; ?>">
+		<h2><?php echo get_page_by_title($parent_name)->post_title; ?></h2>
 
+		<?php
+			$parent_id = get_page_by_title($parent_name)->ID;
+
+			global $post;
+
+			$section_posts_args = array(
+				'post_type' => 'page',
+				'post_parent' => $parent_id
+				);
+
+			$section_posts_query = new WP_Query( $section_posts_args );
+
+			
+		?>
+		<?php if ($section_posts_query->have_posts()) : // Show latest posts as default ?>
+			<div class="col-sm-6 relative <?php echo $side==right ? 'pull-right':''; ?>">
+				<?php while ($section_posts_query->have_posts()) : $section_posts_query->the_post(); ?>
+
+					<?php if (has_post_thumbnail() ) { ?>
+						<div class="feature-img" data-carouselname="#carousel-gallery-<?php echo $post->post_name; ?>" data-parent="<?php echo get_post($parent_id)->post_name; ?>">
+							<?php the_title('<h1>','</h1>'); ?>
+							<?php the_post_thumbnail('medium'); ?>
+						</div>
+					<?php } ?>
+				<?php endwhile; ?>
+			</div><!-- /.col-sm-6 -->
+
+			<div class="col-sm-6">
+			<?php $i = 0; while ($section_posts_query->have_posts()) : $section_posts_query->the_post(); 
+				$gallery = get_post_gallery_images($post->ID); ?>
+
+				<div id="carousel-gallery-<?php echo $post->post_name; ?>" class="carousel slide <?php echo $i==0 ? 'visible':''; ?>" data-ride="carousel" data-target="<?php echo get_post($parent_id)->post_name; ?>">
+					<!-- Indicators -->
+					<ol class="carousel-indicators">
+						<?php foreach ($gallery as $key => $image_src): ?>
+							<li data-target="#carousel-gallery-<?php echo $post->post_name; ?>" data-slide-to="<?php echo $key; ?>" <?php echo $key == 0 ? 'class="active"':''; ?>></li>
+						<?php endforeach; ?>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					
+					<?php foreach ($gallery as $key => $image_src): ?>
+						<div class="item <?php echo $key == 0 ? 'active' : ''?>">
+							<img src="<?php bloginfo('template_url'); ?>/img/slides/pixel.png" style="background-image:url(<?php echo $image_src; ?>)" alt=""/>
+							<div class="carousel-caption">
+							</div>
+						</div>
+					<?php endforeach; ?>
+
+					</div>
+
+					<!-- Controls -->
+					<a class="left carousel-control" href="#carousel-gallery-<?php echo $post->post_name; ?>" role="button" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" href="#carousel-gallery-<?php echo $post->post_name; ?>" role="button" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+						<span class="sr-only">Next</span>
+					</a>
+				</div>
+			<?php $i++; endwhile; wp_reset_postdata(); ?>
+
+			</div><!-- /.col-sm-6 -->
+		<?php endif; ?>
+	</div><!--#contruccion-->
+<?php } 
+			
 
 
 

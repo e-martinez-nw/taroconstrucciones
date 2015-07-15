@@ -247,237 +247,119 @@ div#logonav {
 // Carousel
 // ====================================
 
-.carousel-slide{
-	height: 460px;
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
+[id^="carousel-gallery-"]{
+	.none;
+	&.visible {display: block; .transition}
 }
-
-.carousel-control{ cursor: pointer; }
 
 //Video 
 // ====================================
 video {min-width: 1100px;}
 
-//Títulos de slides 
+// Slides
 // ====================================
-.bx-pager-item a:hover {
-	&:before {
-		display: block;
-		transition: .2s;
-	}
-}
+#construccion, #servicios-de-medio-ambiente, #desarrollos-en-venta {
+	height: 555px;
 
-.bx-pager-item a::before {
-	position: absolute;
-	top: 96px;
-	left: 0;
-	width: 100%;
-	font-size: 30px;
-	color: white;
-	background-color: rgba(0, 179, 190, .6);
-	border-radius: 5px;
-	padding: 10px;
+	.relative {
+		.feature-img:nth-child(1) {
+			right: 0;
+			top: 0;
+		}
 
-	.none;
-}
+		.feature-img:nth-child(2) {
+			top: 125px;
+			left: -50px;
+		}
 
-// Slide Construcción
-// ====================================
-#slideconstruccion {
-	padding: 20px 0 100px;
-
-	.bx-viewport {
-		left: 330px;
-		width: 65% !important;
-	}
-
-	.bx-caption {
-		width: 75%;
-		right: 0;
-		padding-bottom: 0;
-
-		span {
-			height: auto;
-			padding: 10px 45px;
+		.feature-img:nth-child(3) {
+			top: 250px;
+			right: 0;
 		}
 	}
+}
+#servicios-de-medio-ambiente .relative {
+	.feature-img {
+		&:hover {
+			h1 {
+				display: table;
+				padding: 10px;
+			}
+		}
 
-	li {
-		width: 100% important;
+		&:nth-child(1), &:nth-child(3) {
+			left:0;
+		}//&:nth-child(1), &:nth-child(3)
+		&:nth-child(2){left: 210px;}
+	}
+}
+.feature-img {
+    position: absolute;
+    overflow: hidden;
+    height: 235px;
+    width: 270px;
+    cursor: pointer;
+    -webkit-clip-path: polygon(
+		25% 0%, 
+		75% 0%, 
+	    100% 50%, 
+	    75% 100%, 
+	    25% 100%, 
+	    0% 50%
+	    );
+	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+
+    h1 {
+		position: absolute;
+		color: white;
+		font-size: 2em;
+		text-align: center;
 		left: 0;
-		height: 500px;
-	}
-	img {width: auto;}
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background-color: rgba(0,179,190,.6);
+		margin: auto;
+		height: 50px;
+		padding: 10px 0;
+		line-height: 1em;
+		z-index: 2;
+		border-radius: 10px;
+		.none;
+		.transition;
+    }//h1
 
-	.bx-pager {
-		min-width: 1200px;
-		left: -210px;
-	}
-	.bx-pager-item:first-child {
-	    position: relative;   
-	    top: 115px;   
-	    left: 5px;
+    img {
+    	width: 100%;
+    	height: 100%;
+    }
 
-	    a::before {content: "Comercial";}
-	}
+    &:hover {
+    	h1 {
+    		display: block;
+    		.transition;
+    	}
+    }
+}//.feature-img
 
-	.bx-pager-item {
-	    position: relative;   
-	    top: -50px;   
-	    left: -85px;
-
-	    a::before {
-	    	content: "Sector Público";
-	    	top: 86px;
-	    }
-	}
-
-	.bx-pager-item:last-child {
-	    position: relative;   
-	    top: 280px;   
-	    left: -355px;
-
-	    a::before {content: "Residencial";}
-	}
-	.bx-controls-direction {
-		position: relative;
-		top: 100px;
-		left: 30px;
-		width: 97.5%;
-	}
+.img-responsive, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+	width: 400px;
+	height: 500px;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
 }
 
-// Slide servicios
-// ====================================
-#servicios img {
-	width: 100%;
-	height: auto;	
-}
-// Slide servicios
-// ====================================
-#slideservicios {
-	padding: 80px 0 100px;
-	.bx-viewport {
-		left: -180px;
-		width: 70% !important;
-	}
 
-	.bx-caption {
-		left: 140px;
-		width: 70.2%;
-		padding-bottom: 10px;
-	}
-	span { 
-		padding: 10px 35px;
+// Urbanización
+// ====================================
+#urbanizacion {
+	img {
+		width: 100%;
 		height: auto;
 	}
-
-	.bx-controls-direction {
-		position: relative;
-		left: -441px;
-		width: 98%;
-		top: 240px;
-	}
-	.bx-pager-item:first-child {
-		position: relative;
-		top: 180px;
-		left: 510px;
-		display: table;
-
-		a::before {
-			content: "Campañas Anti Fauna Nociva";
-			top: 46px;
-			width: 80%;
-			left: 10%;
-		}
-
-	}
-	.bx-pager-item {
-		position: relative;
-		top: 125px;
-		left: 515px;
-
-		a::before {
-			content: "Control de Plagas";
-			top: 66px;
-		}
-	}
-	.bx-pager-item:last-child {
-		top: 300px;
-		position: relative;
-		left: 75px;
-
-		a::before {
-			content: "Estudios Ambientales";
-			top: 66px;
-		}
-	}
-	.bx-custom-pager {top:-240px; bottom: auto;}
-
 }
 
-
-// Slide Desarrollos
-// ====================================
-#slidedesarrollos {
-	padding: 20px 0 80px;
-
-	img {width: auto;}
-
-	.bx-pager-item:nth-child(3), .bx-pager-item:nth-child(4), .bx-pager-item:nth-child(5), .bx-pager-item:nth-child(6),  {
-		.none
-	}
-
-	.bx-pager-item:first-child {
-	    position: relative;   
-	    top: 115px;   
-	    left: 0;
-
-		a::before {content: "Preventa"}
-	}
-
-	.bx-pager-item {
-	    position: relative;   
-	    top: -50px;   
-	    left: -65px;
-
-		a::before {content: "Venta"}
-	}
-
-	.bx-pager-item:last-child {
-	    position: relative;   
-	    top: 280px;   
-	    left: -285px;
-
-	    a::before {content: "Desarrollos"}
-	}
-
-	.bx-caption {
-		right: 40px;
-		width: 52.5%;
-	}
-	.bx-custom-pager {top:60px; bottom: auto;}
-}
-
-.button {
-	text-align: center;
-	padding: 50px 0;
-
-	.primary-button {
-		display: inline-block;
-
-		a {
-			padding: 10px 15px 1px;
-			display: block;
-			border-radius: 5px;
-			background-color: #00B3BE;
-			color: @white;
-			font-size: 18px;
-		}
-	}
-}
 
 // Clientes
 // ====================================
@@ -508,6 +390,30 @@ video {min-width: 1100px;}
 }//#clientes
 
 
+
+
+// Button
+// ====================================
+.button {
+	text-align: center;
+	a {
+		display: inline-block;
+		padding: 10px 25px 1px;
+		border-radius: 5px;
+		background-color: rgb(0,179,190);
+		.transition;
+
+		p {
+			color: @white;
+		}
+
+		&:hover{
+			text-decoration: none;
+			background-color: darken(rgb(0,179,190), 20%);
+			.transition;
+		}
+	}
+}
 
 
 // Contacto
