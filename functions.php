@@ -352,6 +352,12 @@ function nw_breadcrumbs(){
 require_once( 'widget/widget-custom-link.php' ); // Agrega un custom url, icon o imagen.
 require_once( 'widget/widget-main-nav.php' ); // Agrega un custom url, icon o imagen.
 
+function get_attachment_id_from_src ($image_src) {
+	global $wpdb;
+	$attachment = $wpdb->get_col($wpdb->prepare("SELECT ID FROM $wpdb->posts WHERE guid='%s';", $image_src )); 
+	return $attachment[0]; 
+}
+
 function hexagon_gallery($parent_name, $side){ ?>
 	<div id="<?php echo get_page_by_title($parent_name)->post_name; ?>">
 		<h2><?php echo get_page_by_title($parent_name)->post_title; ?></h2>
@@ -371,19 +377,23 @@ function hexagon_gallery($parent_name, $side){ ?>
 			
 		?>
 		<?php if ($section_posts_query->have_posts()) : // Show latest posts as default ?>
-			<div class="col-sm-6 relative <?php echo $side==right ? 'pull-right':''; ?>">
+			<?php $text = get_post_field('post_content', $parent_id); ?>
+			<?php if (empty($text)) { ?>
+			<?php } else { ?>
+				<p><?php echo $text; ?></p>
+			<?php } ?>
+			<div class="col-sm-5 relative <?php echo $side==right ? 'pull-right':''; ?>">
 				<?php while ($section_posts_query->have_posts()) : $section_posts_query->the_post(); ?>
-
 					<?php if (has_post_thumbnail() ) { ?>
 						<div class="feature-img" data-carouselname="#carousel-gallery-<?php echo $post->post_name; ?>" data-parent="<?php echo get_post($parent_id)->post_name; ?>">
-							<?php the_title('<h1>','</h1>'); ?>
+							<?php the_title('<h3>','</h3>'); ?>
 							<?php the_post_thumbnail('medium'); ?>
 						</div>
 					<?php } ?>
 				<?php endwhile; ?>
 			</div><!-- /.col-sm-6 -->
 
-			<div class="col-sm-6">
+			<div class="col-sm-7">
 			<?php $i = 0; while ($section_posts_query->have_posts()) : $section_posts_query->the_post(); 
 				$gallery = get_post_gallery_images($post->ID); ?>
 
@@ -397,15 +407,20 @@ function hexagon_gallery($parent_name, $side){ ?>
 
 					<!-- Wrapper for slides -->
 					<div class="carousel-inner" role="listbox">
-					
-					<?php foreach ($gallery as $key => $image_src): ?>
-						<div class="item <?php echo $key == 0 ? 'active' : ''?>">
-							<img src="<?php bloginfo('template_url'); ?>/img/slides/pixel.png" style="background-image:url(<?php echo $image_src; ?>)" alt=""/>
-							<div class="carousel-caption">
+						<?php $description = get_post_custom_values('description'); ?>
+						<?php if (empty($description)) {
+						} else { ?>
+							<div class="description">
+								<p><?php echo $description[0]; ?></p>
 							</div>
-						</div>
-					<?php endforeach; ?>
-
+						<?php } ?>
+						<?php foreach ($gallery as $key => $image_src): ?>
+							<?php $id = get_attachment_id_from_src($image_src);?>
+							<?php $alt_text = get_post_meta($id, '_wp_attachment_image_alt', true); ?>
+							<div class="item <?php echo $key == 0 ? 'active' : ''?>">
+								<img src="<?php bloginfo('template_url'); ?>/img/slides/pixel.png" style="background-image:url(<?php echo $image_src; ?>)" alt=""/>
+							</div>
+						<?php endforeach; ?>
 					</div>
 
 					<!-- Controls -->

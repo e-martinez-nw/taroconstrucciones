@@ -78,12 +78,12 @@ h1, h2, h3, h4, h5, h6{
 	font-weight: 600; 
 	text-align: left;
 }
-h1 {font-size: 50px;}
-h2 {font-size: 36px;}
-h3 {font-size: 27px;}
-h4 {font-size: 22px;}
-h5 {font-size: 18px;}
-h6 {font-size: 16px;}
+h1 {font-size: 65px;}
+h2 {font-size: 50px;}
+h3 {font-size: 36px;}
+h4 {font-size: 27px;}
+h5 {font-size: 22px;}
+h6 {font-size: 18px;}
 
 img{ 
 	vertical-align: top;
@@ -263,7 +263,7 @@ video {min-width: 1100px;}
 
 	.relative {
 		.feature-img:nth-child(1) {
-			right: 0;
+			left: 100px;
 			top: 0;
 		}
 
@@ -274,30 +274,30 @@ video {min-width: 1100px;}
 
 		.feature-img:nth-child(3) {
 			top: 250px;
-			right: 0;
+			left: 100px;
 		}
 	}
 }
 #servicios-de-medio-ambiente .relative {
 	.feature-img {
 		&:hover {
-			h1 {
+			h3 {
 				display: table;
 				padding: 10px;
 			}
 		}
 
 		&:nth-child(1), &:nth-child(3) {
-			left:0;
+			right:0;
 		}//&:nth-child(1), &:nth-child(3)
-		&:nth-child(2){left: 210px;}
+		&:nth-child(2){left: 250px;}
 	}
 }
 .feature-img {
     position: absolute;
     overflow: hidden;
-    height: 235px;
-    width: 270px;
+    height: 180px;
+    width: 220px;
     cursor: pointer;
     -webkit-clip-path: polygon(
 		25% 0%, 
@@ -309,10 +309,10 @@ video {min-width: 1100px;}
 	    );
 	clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
 
-    h1 {
+    h3 {
 		position: absolute;
 		color: white;
-		font-size: 2em;
+		font-size: 1.2em;
 		text-align: center;
 		left: 0;
 		right: 0;
@@ -335,7 +335,7 @@ video {min-width: 1100px;}
     }
 
     &:hover {
-    	h1 {
+    	h3 {
     		display: block;
     		.transition;
     	}
@@ -343,13 +343,22 @@ video {min-width: 1100px;}
 }//.feature-img
 
 .img-responsive, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
-	width: 400px;
-	height: 500px;
+	width: 472px;
+	height: 540px;
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-position: center;
 }
 
+.carousel-inner .description {
+	position: absolute;
+	z-index: 99;
+	padding: 20px;
+	background-color: rgba(255,255,255,.7);
+	font-size: 14px;
+}
+
+.carousel-control.left, .carousel-control.right {background-image: none !important;}
 
 // Urbanización
 // ====================================

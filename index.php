@@ -25,7 +25,7 @@ $nosotros_query = new WP_Query( $nosotros_args );
 			<div class="col-sm-10 col-xs-offset-1">
 				<section id="nosotros" style="background-image:url('<?php echo $thumb[0]; ?>'); background-position:center; background-size:cover;">
 					<article>
-						<h1> <?php the_title(); ?> </h1>
+						<h2> <?php the_title(); ?> </h2>
 						<?php the_content(); ?>
 					</article>
 				</section><!--#nosotros-->
@@ -38,7 +38,7 @@ $nosotros_query = new WP_Query( $nosotros_args );
 <section id="servicios">
 	<div class="container">
 		<div class="col-sm-10 col-xs-offset-1">
-			<h1>Servicios</h1>
+			<h2>Servicios</h2>
 			<?php echo hexagon_gallery('construccion'); ?>
 
 			<div class="clearfix"></div>
@@ -60,7 +60,7 @@ $nosotros_query = new WP_Query( $nosotros_args );
 					?> 
 					<section id="urbanizacion" style="background-image:url('<?php echo $thumb[0]; ?>'); background-position:center; background-size:cover;">
 						<article>
-							<h1> <?php the_title(); ?> </h1>
+							<h2> <?php the_title(); ?> </h2>
 							<?php the_content(); ?>
 						</article>
 					</section><!--#urbanizacion-->
@@ -99,7 +99,7 @@ $nosotros_query = new WP_Query( $nosotros_args );
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-10 col-xs-offset-1">
-					<h1>Clientes</h1>
+					<h2>Clientes</h2>
 					<?php dynamic_sidebar( 'clientes' ); ?>
 				</div><!--.col-sm-3-->
 			</div><!--.row-->
@@ -111,7 +111,7 @@ $nosotros_query = new WP_Query( $nosotros_args );
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-6 col-xs-offset-1 mapa">
-				<h1>Contacto</h1>
+				<h2>Contacto</h2>
 				<?php if(is_active_sidebar('contacto')): ?>
 					<?php dynamic_sidebar( 'contacto' ); ?>
 				<?php endif; ?>
